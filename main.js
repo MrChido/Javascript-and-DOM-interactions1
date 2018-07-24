@@ -1,17 +1,21 @@
-const   myHeading = document.getElementById('myHeading');
-const   Transformation = document.getElementById('Transformation');
-const   feature1 = document.getElementById('feature1');
-const   choice = document.getElementById('choice');
+const bluelist = document.getElementsByTagName('li');
+const transform =document.getElementById('Transformation');
+const choice= document.getElementById('choice');
+const EnB= document.querySelectorAll('EnB');
+const evens= document.querySelectorAll('li:nth-child(even)');
 
-myHeading.addEventListener('click', () =>{
-    myHeading.style.background= 'rgb(199,44,72)';
-    myHeading.style.color='#fbaed2';
+transform.addEventListener('click', () =>{
+for (let b =0; b < bluelist.length; b++){
+    bluelist[b].style.background=choice.value;
+}
 });
-
-Transformation.addEventListener('click', () =>{
-    feature1.style.color='rgb(0,105,148)';
-   feature1.style.fontSize= 34;
+transform.addEventListener('click', () =>{
+    for (let b =0; b < EnB.length; b++){
+        EnB[b].style.background='rgb(249,149,136)';
+    }
 });
-
-
-
+transform.addEventListener('click', () =>{
+    for (let b =0; b < evens.length; b++){
+        evens[b].style.color='lightgray';
+    }
+});
